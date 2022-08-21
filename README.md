@@ -78,15 +78,10 @@ Note: I have done some testing to support that the time provided by deltaTime is
 Now the time stamp we can get by using `let timeStamp = Double(DispatchTime.now().uptimeNanoseconds) * 0.00000000001`
 
 
-  |
-| Syntax      | Description |  |
-| ----------- | ----------- |  |
-| Header      | Title       |  |
-| Paragraph   | Text        |
-  |
-| Time taken      |  delta Time |  |
-| in nanoseconds  |             |  |
-| ----------------------------- |  |
+
+
+| Time taken in nanoseconds     |  delta Time |
+| -------- | ------------- |
 | 8428708  |   0.008333366667  |
 | 8339208  |   0.00833339  |
 | 7459417  |   0.008333403001  |
