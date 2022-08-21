@@ -78,205 +78,214 @@ Note: I have done some testing to support that the time provided by deltaTime is
 Now the time stamp we can get by using `let timeStamp = Double(DispatchTime.now().uptimeNanoseconds) * 0.00000000001`
 
 
-
-
-timefromPrev    8428708    deltaTime    0.008333366667
-timefromPrev    8339208    deltaTime    0.00833339
-timefromPrev    7459417    deltaTime    0.008333403001
-timefromPrev    9302792    deltaTime    0.008333409767
-timefromPrev    7347625    deltaTime    0.008333413204
-timefromPrev    8348666    deltaTime    0.008333414933
-timefromPrev    8333125    deltaTime    0.0083334158
-timefromPrev    9275750    deltaTime    0.008333416234
-timefromPrev    8258167    deltaTime    0.00833341645
-timefromPrev    8318917    deltaTime    0.008333416559
-timefromPrev    8343208    deltaTime    0.008333416613
-timefromPrev    8340417    deltaTime    0.00833341664
-timefromPrev    8321291    deltaTime    0.008333416654
-timefromPrev    8336209    deltaTime    0.008333416661
-timefromPrev    8332625    deltaTime    0.008333416664
-timefromPrev    8332333    deltaTime    0.008333416666
-timefromPrev    8353583    deltaTime    0.008333416667
-timefromPrev    8308667    deltaTime    0.008333416667
-timefromPrev    8357958    deltaTime    0.008333416667
-timefromPrev    8322500    deltaTime    0.008333416667
-timefromPrev    8316292    deltaTime    0.008333416667
-timefromPrev    8343125    deltaTime    0.008333416667
-timefromPrev    8336167    deltaTime    0.008333416667
-timefromPrev    8326625    deltaTime    0.008333416667
-timefromPrev    8339000    deltaTime    0.008333416667
-timefromPrev    8333041    deltaTime    0.008333416667
-timefromPrev    8333084    deltaTime    0.008333416667
-timefromPrev    8330250    deltaTime    0.008333416667
-timefromPrev    8336666    deltaTime    0.008333416667
-timefromPrev    8329209    deltaTime    0.008333416667
-timefromPrev    8334000    deltaTime    0.008333416667
-timefromPrev    8333041    deltaTime    0.008333416667
-timefromPrev    8333584    deltaTime    0.008333416667
-timefromPrev    8336500    deltaTime    0.008333416667
-timefromPrev    8333250    deltaTime    0.008333416667
-timefromPrev    8330166    deltaTime    0.008333416667
-timefromPrev    8330459    deltaTime    0.008333416667
-timefromPrev    8337583    deltaTime    0.008333416667
-timefromPrev    8330458    deltaTime    0.008333416667
-timefromPrev    8339750    deltaTime    0.008333416667
-timefromPrev    8348834    deltaTime    0.008333416667
-timefromPrev    8315791    deltaTime    0.008333416667
-timefromPrev    8329459    deltaTime    0.008333416667
-timefromPrev    8335625    deltaTime    0.008333416667
-timefromPrev    8332916    deltaTime    0.008333416667
-timefromPrev    8331542    deltaTime    0.008333416667
-timefromPrev    8337792    deltaTime    0.008333416667
-timefromPrev    8332000    deltaTime    0.008333416667
-timefromPrev    8330708    deltaTime    0.008333416667
-timefromPrev    8335375    deltaTime    0.008333416667
-timefromPrev    8330208    deltaTime    0.008333416667
-timefromPrev    8334292    deltaTime    0.008333416667
-timefromPrev    8331875    deltaTime    0.008333416667
-timefromPrev    8348750    deltaTime    0.008333416667
-timefromPrev    8328875    deltaTime    0.008333416667
-timefromPrev    8334208    deltaTime    0.008333416667
-timefromPrev    8332084    deltaTime    0.008333416667
-timefromPrev    8319833    deltaTime    0.008333416667
-timefromPrev    8336292    deltaTime    0.008333416667
-timefromPrev    8343416    deltaTime    0.008333416667
-timefromPrev    8332084    deltaTime    0.008333416667
-timefromPrev    8326375    deltaTime    0.008333416667
-timefromPrev    8345000    deltaTime    0.008333416667
-timefromPrev    8328125    deltaTime    0.008333416667
-timefromPrev    8324250    deltaTime    0.008333416667
-timefromPrev    8361208    deltaTime    0.008333416667
-timefromPrev    8292750    deltaTime    0.008333416667
-timefromPrev    7495375    deltaTime    0.008333416667
-timefromPrev    8361125    deltaTime    0.008333416667
-timefromPrev    8309000    deltaTime    0.008333416667
-timefromPrev    8345042    deltaTime    0.008333416667
-timefromPrev    9262458    deltaTime    0.008333416667
-timefromPrev    8232542    deltaTime    0.008333416667
-timefromPrev    8344125    deltaTime    0.008333416667
-timefromPrev    8343708    deltaTime    0.008333416667
-timefromPrev    8331917    deltaTime    0.008333416667
-timefromPrev    8365208    deltaTime    0.008333416667
-timefromPrev    7451792    deltaTime    0.008333416667
-timefromPrev    8360083    deltaTime    0.008333416667
-timefromPrev    9155542    deltaTime    0.008333416667
-timefromPrev    7956041    deltaTime    0.008333416667
-timefromPrev    8858917    deltaTime    0.008333416667
-timefromPrev    8156875    deltaTime    0.008333416667
-timefromPrev    7484000    deltaTime    0.008333416667
-timefromPrev    8334042    deltaTime    0.008333416667
-timefromPrev    9277000    deltaTime    0.00833340948
-timefromPrev    8255416    deltaTime    0.00833340948
-timefromPrev    7465209    deltaTime    0.00833340948
-timefromPrev    8349500    deltaTime    0.00833340948
-timefromPrev    8331291    deltaTime    0.00833340948
-timefromPrev    8331042    deltaTime    0.00833340948
-timefromPrev    9294833    deltaTime    0.00833340948
-timefromPrev    8223875    deltaTime    0.00833340948
-timefromPrev    8369292    deltaTime    0.00833340948
-timefromPrev    8327250    deltaTime    0.00833340948
-timefromPrev    8317208    deltaTime    0.008333438266
-timefromPrev    8338584    deltaTime    0.008333438266
-timefromPrev    8349958    deltaTime    0.008333445617
-timefromPrev    8314542    deltaTime    0.008333445617
-timefromPrev    8342333    deltaTime    0.008333483786
-timefromPrev    8323542    deltaTime    0.008333483786
-timefromPrev    8333083    deltaTime    0.008333483786
-timefromPrev    8331208    deltaTime    0.008333483786
-timefromPrev    7456042    deltaTime    0.008333483786
-timefromPrev    8345333    deltaTime    0.008333483786
-timefromPrev    9275334    deltaTime    0.008333483786
-timefromPrev    8250833    deltaTime    0.008333502607
-timefromPrev    8337583    deltaTime    0.008333502607
-timefromPrev    8330542    deltaTime    0.008333501771
-timefromPrev    8347458    deltaTime    0.008333501771
-timefromPrev    8332292    deltaTime    0.008333501771
-timefromPrev    8327417    deltaTime    0.008333501771
-timefromPrev    8332541    deltaTime    0.008333501771
-timefromPrev    8334209    deltaTime    0.008333501771
-timefromPrev    8349250    deltaTime    0.008333501771
-timefromPrev    8328083    deltaTime    0.008333501771
-timefromPrev    8319250    deltaTime    0.008333501771
-timefromPrev    8334833    deltaTime    0.008333501771
-timefromPrev    8339709    deltaTime    0.008333501771
-timefromPrev    8353666    deltaTime    0.008333536091
-timefromPrev    8301459    deltaTime    0.008333536091
-timefromPrev    8331166    deltaTime    0.008333546134
-timefromPrev    8345167    deltaTime    0.008333546134
-timefromPrev    8330417    deltaTime    0.008333546134
-timefromPrev    8337208    deltaTime    0.008333546134
-timefromPrev    8330375    deltaTime    0.008333546134
-timefromPrev    8335583    deltaTime    0.008333546134
-timefromPrev    8333042    deltaTime    0.008333546134
-timefromPrev    8334167    deltaTime    0.008333546134
-timefromPrev    8329250    deltaTime    0.008333546134
-timefromPrev    8338416    deltaTime    0.00833358784
-timefromPrev    8317917    deltaTime    0.00833358784
-timefromPrev    8335875    deltaTime    0.008333599665
-timefromPrev    8346500    deltaTime    0.008333599665
-timefromPrev    8323042    deltaTime    0.008333599665
-timefromPrev    8341291    deltaTime    0.008333599665
-timefromPrev    8329625    deltaTime    0.008333599665
-timefromPrev    8334750    deltaTime    0.008333599665
-timefromPrev    8333250    deltaTime    0.008333599665
-timefromPrev    8331125    deltaTime    0.008333643322
-timefromPrev    8329250    deltaTime    0.008333643322
-timefromPrev    8339334    deltaTime    0.008333653283
-timefromPrev    8332166    deltaTime    0.008333653283
-timefromPrev    8347834    deltaTime    0.008333696818
-timefromPrev    8308375    deltaTime    0.008333696818
-timefromPrev    8334291    deltaTime    0.008333696818
-timefromPrev    8333417    deltaTime    0.008333696818
-timefromPrev    8336167    deltaTime    0.008333696818
-timefromPrev    8328666    deltaTime    0.008333696818
-timefromPrev    8336167    deltaTime    0.008333696818
-timefromPrev    8333583    deltaTime    0.008333696818
-timefromPrev    8330625    deltaTime    0.008333696818
-timefromPrev    8334959    deltaTime    0.008333696818
-timefromPrev    8347916    deltaTime    0.008333717776
-timefromPrev    8309292    deltaTime    0.008333717776
-timefromPrev    8338292    deltaTime    0.008333719543
-timefromPrev    8340333    deltaTime    0.008333719543
-timefromPrev    8338917    deltaTime    0.008333719543
-timefromPrev    8331708    deltaTime    0.008333719543
-timefromPrev    8333083    deltaTime    0.008333719543
-timefromPrev    8338500    deltaTime    0.0083337592
-timefromPrev    8315292    deltaTime    0.0083337592
-timefromPrev    8379708    deltaTime    0.008333761779
-timefromPrev    7435125    deltaTime    0.008333761779
-timefromPrev    9286625    deltaTime    0.0083337622
-timefromPrev    8243625    deltaTime    0.0083337622
-timefromPrev    8344542    deltaTime    0.008333761545
-timefromPrev    8340250    deltaTime    0.008333761545
-timefromPrev    8327292    deltaTime    0.008333761545
-timefromPrev    8332333    deltaTime    0.008333761545
-timefromPrev    8334583    deltaTime    0.008333761545
-timefromPrev    8361542    deltaTime    0.008333761545
-timefromPrev    8312875    deltaTime    0.008333761545
-timefromPrev    8360500    deltaTime    0.008333761545
-timefromPrev    8292000    deltaTime    0.008333761545
-timefromPrev    8346833    deltaTime    0.008333760357
-timefromPrev    8324417    deltaTime    0.008333760357
-timefromPrev    8335125    deltaTime    0.008333758653
-timefromPrev    8367375    deltaTime    0.008333758653
-timefromPrev    7415042    deltaTime    0.008333758653
-timefromPrev    8369791    deltaTime    0.008333758653
-timefromPrev    9264250    deltaTime    0.008333758653
-timefromPrev    8241167    deltaTime    0.008333758653
-timefromPrev    8349542    deltaTime    0.008333758653
-timefromPrev    8364791    deltaTime    0.008333758653
-timefromPrev    8312084    deltaTime    0.008333758653
-timefromPrev    8337875    deltaTime    0.008333758095
-timefromPrev    8304875    deltaTime    0.008333758095
-timefromPrev    8360166    deltaTime    0.008333756235
-timefromPrev    8309875    deltaTime    0.008333756235
-timefromPrev    8364875    deltaTime    0.008333756235
-timefromPrev    8320125    deltaTime    0.008333756235
-timefromPrev    8321459    deltaTime    0.008333756235
-timefromPrev    8329958    deltaTime    0.008333756235
-timefromPrev    8331917    deltaTime    0.008333756235
-timefromPrev    8334500    deltaTime    0.008333756235
-timefromPrev    8333958    deltaTime    0.008333756235
-        sum = 1641769208          sum =   1.641706133
+  |
+| Syntax      | Description |  |
+| ----------- | ----------- |  |
+| Header      | Title       |  |
+| Paragraph   | Text        |
+  |
+| Time taken      |  delta Time |  |
+| in nanoseconds  |             |  |
+| ----------------------------- |  |
+| 8428708  |   0.008333366667  |
+| 8339208  |   0.00833339  |
+| 7459417  |   0.008333403001  |
+| 9302792  |   0.008333409767  |
+| 7347625  |   0.008333413204  |
+| 8348666  |   0.008333414933  |
+| 8333125  |   0.0083334158  |
+| 9275750  |   0.008333416234  |
+| 8258167  |   0.00833341645  |
+| 8318917  |   0.008333416559  |
+| 8343208  |   0.008333416613  |
+| 8340417  |   0.00833341664  |
+| 8321291  |   0.008333416654  |
+| 8336209  |   0.008333416661  |
+| 8332625  |   0.008333416664  |
+| 8332333  |   0.008333416666  |
+| 8353583  |   0.008333416667  |
+| 8308667  |   0.008333416667  |
+| 8357958  |   0.008333416667  |
+| 8322500  |   0.008333416667  |
+| 8316292  |   0.008333416667  |
+| 8343125  |   0.008333416667  |
+| 8336167  |   0.008333416667  |
+| 8326625  |   0.008333416667  |
+| 8339000  |   0.008333416667  |
+| 8333041  |   0.008333416667  |
+| 8333084  |   0.008333416667  |
+| 8330250  |   0.008333416667  |
+| 8336666  |   0.008333416667  |
+| 8329209  |   0.008333416667  |
+| 8334000  |   0.008333416667  |
+| 8333041  |   0.008333416667  |
+| 8333584  |   0.008333416667  |
+| 8336500  |   0.008333416667  |
+| 8333250  |   0.008333416667  |
+| 8330166  |   0.008333416667  |
+| 8330459  |   0.008333416667  |
+| 8337583  |   0.008333416667  |
+| 8330458  |   0.008333416667  |
+| 8339750  |   0.008333416667  |
+| 8348834  |   0.008333416667  |
+| 8315791  |   0.008333416667  |
+| 8329459  |   0.008333416667  |
+| 8335625  |   0.008333416667  |
+| 8332916  |   0.008333416667  |
+| 8331542  |   0.008333416667  |
+| 8337792  |   0.008333416667  |
+| 8332000  |   0.008333416667  |
+| 8330708  |   0.008333416667  |
+| 8335375  |   0.008333416667  |
+| 8330208  |   0.008333416667  |
+| 8334292  |   0.008333416667  |
+| 8331875  |   0.008333416667  |
+| 8348750  |   0.008333416667  |
+| 8328875  |   0.008333416667  |
+| 8334208  |   0.008333416667  |
+| 8332084  |   0.008333416667  |
+| 8319833  |   0.008333416667  |
+| 8336292  |   0.008333416667  |
+| 8343416  |   0.008333416667  |
+| 8332084  |   0.008333416667  |
+| 8326375  |   0.008333416667  |
+| 8345000  |   0.008333416667  |
+| 8328125  |   0.008333416667  |
+| 8324250  |   0.008333416667  |
+| 8361208  |   0.008333416667  |
+| 8292750  |   0.008333416667  |
+| 7495375  |   0.008333416667  |
+| 8361125  |   0.008333416667  |
+| 8309000  |   0.008333416667  |
+| 8345042  |   0.008333416667  |
+| 9262458  |   0.008333416667  |
+| 8232542  |   0.008333416667  |
+| 8344125  |   0.008333416667  |
+| 8343708  |   0.008333416667  |
+| 8331917  |   0.008333416667  |
+| 8365208  |   0.008333416667  |
+| 7451792  |   0.008333416667  |
+| 8360083  |   0.008333416667  |
+| 9155542  |   0.008333416667  |
+| 7956041  |   0.008333416667  |
+| 8858917  |   0.008333416667  |
+| 8156875  |   0.008333416667  |
+| 7484000  |   0.008333416667  |
+| 8334042  |   0.008333416667  |
+| 9277000  |   0.00833340948  |
+| 8255416  |   0.00833340948  |
+| 7465209  |   0.00833340948  |
+| 8349500  |   0.00833340948  |
+| 8331291  |   0.00833340948  |
+| 8331042  |   0.00833340948  |
+| 9294833  |   0.00833340948  |
+| 8223875  |   0.00833340948  |
+| 8369292  |   0.00833340948  |
+| 8327250  |   0.00833340948  |
+| 8317208  |   0.008333438266  |
+| 8338584  |   0.008333438266  |
+| 8349958  |   0.008333445617  |
+| 8314542  |   0.008333445617  |
+| 8342333  |   0.008333483786  |
+| 8323542  |   0.008333483786  |
+| 8333083  |   0.008333483786  |
+| 8331208  |   0.008333483786  |
+| 7456042  |   0.008333483786  |
+| 8345333  |   0.008333483786  |
+| 9275334  |   0.008333483786  |
+| 8250833  |   0.008333502607  |
+| 8337583  |   0.008333502607  |
+| 8330542  |   0.008333501771  |
+| 8347458  |   0.008333501771  |
+| 8332292  |   0.008333501771  |
+| 8327417  |   0.008333501771  |
+| 8332541  |   0.008333501771  |
+| 8334209  |   0.008333501771  |
+| 8349250  |   0.008333501771  |
+| 8328083  |   0.008333501771  |
+| 8319250  |   0.008333501771  |
+| 8334833  |   0.008333501771  |
+| 8339709  |   0.008333501771  |
+| 8353666  |   0.008333536091  |
+| 8301459  |   0.008333536091  |
+| 8331166  |   0.008333546134  |
+| 8345167  |   0.008333546134  |
+| 8330417  |   0.008333546134  |
+| 8337208  |   0.008333546134  |
+| 8330375  |   0.008333546134  |
+| 8335583  |   0.008333546134  |
+| 8333042  |   0.008333546134  |
+| 8334167  |   0.008333546134  |
+| 8329250  |   0.008333546134  |
+| 8338416  |   0.00833358784  |
+| 8317917  |   0.00833358784  |
+| 8335875  |   0.008333599665  |
+| 8346500  |   0.008333599665  |
+| 8323042  |   0.008333599665  |
+| 8341291  |   0.008333599665  |
+| 8329625  |   0.008333599665  |
+| 8334750  |   0.008333599665  |
+| 8333250  |   0.008333599665  |
+| 8331125  |   0.008333643322  |
+| 8329250  |   0.008333643322  |
+| 8339334  |   0.008333653283  |
+| 8332166  |   0.008333653283  |
+| 8347834  |   0.008333696818  |
+| 8308375  |   0.008333696818  |
+| 8334291  |   0.008333696818  |
+| 8333417  |   0.008333696818  |
+| 8336167  |   0.008333696818  |
+| 8328666  |   0.008333696818  |
+| 8336167  |   0.008333696818  |
+| 8333583  |   0.008333696818  |
+| 8330625  |   0.008333696818  |
+| 8334959  |   0.008333696818  |
+| 8347916  |   0.008333717776  |
+| 8309292  |   0.008333717776  |
+| 8338292  |   0.008333719543  |
+| 8340333  |   0.008333719543  |
+| 8338917  |   0.008333719543  |
+| 8331708  |   0.008333719543  |
+| 8333083  |   0.008333719543  |
+| 8338500  |   0.0083337592  |
+| 8315292  |   0.0083337592  |
+| 8379708  |   0.008333761779  |
+| 7435125  |   0.008333761779  |
+| 9286625  |   0.0083337622  |
+| 8243625  |   0.0083337622  |
+| 8344542  |   0.008333761545  |
+| 8340250  |   0.008333761545  |
+| 8327292  |   0.008333761545  |
+| 8332333  |   0.008333761545  |
+| 8334583  |   0.008333761545  |
+| 8361542  |   0.008333761545  |
+| 8312875  |   0.008333761545  |
+| 8360500  |   0.008333761545  |
+| 8292000  |   0.008333761545  |
+| 8346833  |   0.008333760357  |
+| 8324417  |   0.008333760357  |
+| 8335125  |   0.008333758653  |
+| 8367375  |   0.008333758653  |
+| 7415042  |   0.008333758653  |
+| 8369791  |   0.008333758653  |
+| 9264250  |   0.008333758653  |
+| 8241167  |   0.008333758653  |
+| 8349542  |   0.008333758653  |
+| 8364791  |   0.008333758653  |
+| 8312084  |   0.008333758653  |
+| 8337875  |   0.008333758095  |
+| 8304875  |   0.008333758095  |
+| 8360166  |   0.008333756235  |
+| 8309875  |   0.008333756235  |
+| 8364875  |   0.008333756235  |
+| 8320125  |   0.008333756235  |
+| 8321459  |   0.008333756235  |
+| 8329958  |   0.008333756235  |
+| 8331917  |   0.008333756235  |
+| 8334500  |   0.008333756235  |
+| 8333958  |   0.008333756235  |
+| -------- | ----------------- |
+| sum = 1641769208 | sum =   1.641706133 |
+| ---------------- | ------------------- |
 
 
