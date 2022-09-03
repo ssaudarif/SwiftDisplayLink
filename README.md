@@ -29,10 +29,31 @@ The best thing about SwiftDisplayLink is that it offers a lot of flexibility to 
 - Can be paused and resumed
 - Change the frameCount to change the number of fired events.
 - Can be configured as infinite by using `repeatFrames` parameter.
-- Each framedata can be configured to fire at different duration.
-- Provide an opportunity to create an upcoming frame so that the frame data is ready when the actual event arrives.
+- Each frame event can be configured to fire at different duration.
+- Provide an opportunity to create an upcoming frame so that the data for that frame is ready when the actual event arrives.
 - It Provides the duration and frame index for each event it may help in some calculations.
 - Also you can temporary pause and play with changed event callback.
+
+## Tutorials
+
+### All configurable parameters :
+#### How to repeat events ?
+When you first create a SwiftDisplayLink Object at that time you can provide this information :
+```
+let displayLink = SwiftDisplayLink(frameCount: 1, repeatFrames: true) { frame in
+    SwiftDisplayLinkFrameData(duration: 1.0, isFrameConstructed: true)
+}
+```
+Now the above code will keep on firing frames until explicitly stopped. Each fire will happen after a second.
+
+#### How to vary durations between events ?
+```
+let displayLink = SwiftDisplayLink(frameCount: 10) { frame in
+    SwiftDisplayLinkFrameData(duration: 0.1 + (frame * 2), isFrameConstructed: true)
+}
+```
+The above code will fire 10 events, with variable durations between them. These durations are calculated using expression - `0.1 + (frame * 2)`. Where frame variable will be between 0 to 9.
+So the gaps between the events will be - 0.1, 2.1, 4.1, 6.1  ....  18.1 
 
 
 
