@@ -25,7 +25,8 @@ public class SwiftDisplayLink {
     private var frame:Int = 0
     private var willRepeat: Bool
     private var nextDuration: CFTimeInterval = minDuration
-    private static let minDuration:CFTimeInterval = 0.016666667
+    private static let minDuration: CFTimeInterval = 0.016666667
+    private var durationSinceLastEvent: Double = 0.0
 
     
     public init( frameCount: Int, repeatFrames: Bool = false, _ frameData: @escaping SwiftDisplayLinkFrameDataBlock ) {
@@ -62,6 +63,12 @@ public class SwiftDisplayLink {
     
     private func startEvents() {
         isPlaying = true
+        let frameData = frameDataBlock(frame)
+        nextDuration = frameData.duration
+        durationSinceLastEvent = 0.0
+        if frameData.isFrameConstructed == false {
+            eventCallBlock?(.constructFrame, frame)
+        }
         SwiftDisplayLinkWrapper.shared.start()
     }
     
@@ -75,20 +82,17 @@ public class SwiftDisplayLink {
             if let kSelf = self {
                 guard kSelf.isPlaying else { return }
                 
+                kSelf.durationSinceLastEvent = kSelf.durationSinceLastEvent + duration
                 kSelf.nextDuration = kSelf.nextDuration - duration
                 if kSelf.nextDuration > 0 {
                     return
                 }
                 
-                let frameData = kSelf.frameDataBlock(kSelf.frame)
-                if frameData.isFrameConstructed == false {
-                    kSelf.eventCallBlock?(.constructFrame, kSelf.frame)
+                if kSelf.frame >= 0 {
+                    kSelf.eventCallBlock?(.performAction(timestamp, kSelf.durationSinceLastEvent), kSelf.frame)
                 }
                 
-                if kSelf.frame >= 0 {
-                    kSelf.eventCallBlock?(.performAction(timestamp, duration), kSelf.frame)
-                }
-                kSelf.setupForNextFrameFire(duration: frameData.duration)
+                kSelf.setupForNextFrameFire()
             }
         }
     }
@@ -96,7 +100,7 @@ public class SwiftDisplayLink {
     
 
     
-    private func setupForNextFrameFire(duration: CFTimeInterval) {
+    private func setupForNextFrameFire() {
         frame = frame + 1
         let n = numberOfFrames
         if frame >= n {
@@ -104,13 +108,18 @@ public class SwiftDisplayLink {
                 frame = 0
             } else {
                 invalid()
+                return
             }
         }
-        self.nextDuration += duration
+        let frameData = frameDataBlock(frame)
+        self.nextDuration += frameData.duration
+        durationSinceLastEvent = 0.0
+        if frameData.isFrameConstructed == false {
+            eventCallBlock?(.constructFrame, frame)
+        }
     }
     
     deinit {
-        print("******hello-------")
         SwiftDisplayLinkWrapper.shared.removeEventBlock(for: self)
     }
     
