@@ -235,7 +235,6 @@ final class SwiftDisplayLinkTests: XCTestCase {
         displayLink.play { event, frame  in
             if case let .performAction( currentTime, duration) = event {
                 timeStampsForPerformAction.append(DispatchTime.now())
-                print(currentTime, duration)
                 if frame == 4 {
                     counter = counter + 1
                     if counter == 2 {
@@ -366,7 +365,6 @@ final class SwiftDisplayLinkTests: XCTestCase {
             if case let .performAction( _, duration) = event {
                 timeStampsForPerformAction.append(DispatchTime.now())
                 XCTAssert(duration > durationsExpected[frame].0 && duration < durationsExpected[frame].1, "Failed for frame \(frame), duration = \(duration)")
-//                print(currentTime, duration)
                 if frame == 4 {
                     counter = counter + 1
                     if counter == 2 {

@@ -37,6 +37,7 @@ The best thing about SwiftDisplayLink is that it offers a lot of flexibility to 
 ## Tutorials
 
 ### All configurable parameters :
+
 #### How to repeat events ?
 When you first create a SwiftDisplayLink Object at that time you can provide this information :
 ```
@@ -46,7 +47,9 @@ let displayLink = SwiftDisplayLink(frameCount: 1, repeatFrames: true) { frame in
 ```
 Now the above code will keep on firing frames until explicitly stopped. Each fire will happen after a second.
 
+
 #### How to vary durations between events ?
+Construct SwiftDisplayLink in following way.
 ```
 let displayLink = SwiftDisplayLink(frameCount: 10) { frame in
     SwiftDisplayLinkFrameData(duration: 0.1 + (frame * 2), isFrameConstructed: true)
