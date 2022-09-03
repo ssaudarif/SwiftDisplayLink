@@ -53,7 +53,7 @@ let displayLink = SwiftDisplayLink(frameCount: 10) { frame in
 }
 ```
 The above code will fire 10 events, with variable durations between them. These durations are calculated using expression - `0.1 + (frame * 2)`. Where frame variable will be between 0 to 9.
-So the gaps between the events will be - 0.1, 2.1, 4.1, 6.1  ....  18.1 
+So the gaps between the events will be - `0.1`, `2.1`, `4.1`, `6.1`  ....  `18.1` 
 
 
 
