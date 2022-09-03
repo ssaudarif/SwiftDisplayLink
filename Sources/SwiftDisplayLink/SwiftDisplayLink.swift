@@ -1,9 +1,61 @@
 import Foundation
 import QuartzCore
 
+/// A SwiftDisplayLinkFrameData is a model object to store data related to a frame.
+/// This model will be created by devs and passed to SwiftDisplayLink library.
+///
+/// This model encapsulte data like duration and isFrameConstructed flag.
+/// During the course of SwiftDisplayLink lifecycle the SwiftDisplayLink library will
+/// keep asking this model from calling app for each frame.
+///
+/// Initilialization of SwiftDisplayLinkFrameData.
+///
+///  ```
+///     SwiftDisplayLinkFrameData(duration: 1.0)
+///  ```
+///
+/// Another Initilialization of SwiftDisplayLinkFrameData that setup isFrameConstructed flag.
+///
+///  ```
+///     SwiftDisplayLinkFrameData(duration: 1.0, isFrameConstructed: false)
+///  ```
+///
 public struct SwiftDisplayLinkFrameData {
+    
+    /// The `duration` is a `CFTimeInterval` object that stores the duration
+    /// that needs to be elapsed before calling event for this frame.
+    ///
+    /// `duration` is taken in form of seconds.
+    /// For half-a-second ->  `duration = 0.5`
+    /// For 10th-of-a-second ->  `duration = 0.1`
+    ///
+    /// Note : The minimum amount that can be passed in `duration` is
+    /// for ``macOS`` - `0.008`
+    /// for ``iOS`` - `0.016`
+    ///
     let duration: CFTimeInterval
+    
+    /// The `isFrameConstructed` is a `Bool` flag if this flag is false, the calling application will
+    /// recieve an extra callback for construct frame event.
+    /// Developers can use this extra callback to perform some pre-render logic for that frame.
+    ///
     let isFrameConstructed: Bool
+    
+    /// Constructor of `SwiftDisplayLinkFrameData` model.
+    ///
+    /// ```
+    /// init(duration d: CFTimeInterval,
+    ///      isFrameConstructed constructed: Bool = true)
+    /// ```
+    ///
+    /// - Parameters:
+    ///     - duration: The CFTimeInterval in seconds.
+    ///     - isFrameConstructed: The Bool flag
+    ///
+    init(duration d: CFTimeInterval, isFrameConstructed constructed: Bool = true) {
+        duration = d
+        isFrameConstructed = constructed
+    }
 }
 
 typealias SwiftDisplayLinkEventInternalBlock = ((_ currentTime: CFTimeInterval, _ duration: CFTimeInterval) -> Void)
