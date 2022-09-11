@@ -2,9 +2,9 @@ name: SwiftDisplayLink Workflow
 
 on:
   push:
-    branches: [ "Adding-GithubActions" ]
+    branches: [ "main" ]
   pull_request:
-    branches: [ "Adding-GithubActions" ]
+    branches: [ "main" ]
 
 jobs:
   build:
@@ -55,6 +55,7 @@ jobs:
           file_to_build=`echo $file_to_build | awk '{$1=$1;print}'`
           xcodebuild build-for-testing -scheme "$scheme" -"$filetype_parameter" "$file_to_build" -destination "platform=$platform"
       - name: Testing macOS project
+        if: success() || failure()
         env:
           scheme: ${{ 'DemoApp (macOS)' }}
           platform: ${{ 'macOS' }}
