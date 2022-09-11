@@ -14,6 +14,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+      - name: Importaint Note
+        run: |
+          echo "The testcases in this project are time and machine performance based. Because as you know we are testing a timer (Display link). So take the failure reports with a pinch of Salt. Do remember that if any one of the iOS and macOS passes. It should be sufficient. Also I will encourage to my future self to please run it on the local machine and see the MR changes once before mergeing on the basis of this advisory."
       - name: Build iOS project for testing
         env:
           scheme: ${{ 'DemoApp (iOS)' }}
@@ -39,3 +42,24 @@ jobs:
           if [ "`ls -A | grep -i \\.xcworkspace\$`" ]; then filetype_parameter="workspace" && file_to_build="`ls -A | grep -i \\.xcworkspace\$`"; else filetype_parameter="project" && file_to_build="`ls -A | grep -i \\.xcodeproj\$`"; fi
           file_to_build=`echo $file_to_build | awk '{$1=$1;print}'`
           xcodebuild test-without-building -scheme "$scheme" -"$filetype_parameter" "$file_to_build" -destination "platform=$platform,name=$device"
+      - name: Build macOS project for testing
+        env:
+          scheme: ${{ 'DemoApp (macOS)' }}
+          platform: ${{ 'macOS' }}
+        run: |
+          # xcrun xctrace returns via stderr, not the expected stdout (see https://developer.apple.com/forums/thread/663959)
+          cd Example/DemoApp
+          # Note: The Scheme is hardcoded set to DemoApp (macOS). Please do change it in case its necessary. On line 44. of swift.yml file"
+          if [ "`ls -A | grep -i \\.xcworkspace\$`" ]; then filetype_parameter="workspace" && file_to_build="`ls -A | grep -i \\.xcworkspace\$`"; else filetype_parameter="project" && file_to_build="`ls -A | grep -i \\.xcodeproj\$`"; fi
+          file_to_build=`echo $file_to_build | awk '{$1=$1;print}'`
+          xcodebuild build-for-testing -scheme "$scheme" -"$filetype_parameter" "$file_to_build" -destination "$platform"
+      - name: Testing macOS project
+        env:
+          scheme: ${{ 'DemoApp (macOS)' }}
+          platform: ${{ 'macOS' }}
+        run: |
+          # xcrun xctrace returns via stderr, not the expected stdout (see https://developer.apple.com/forums/thread/663959)
+          cd Example/DemoApp
+          if [ "`ls -A | grep -i \\.xcworkspace\$`" ]; then filetype_parameter="workspace" && file_to_build="`ls -A | grep -i \\.xcworkspace\$`"; else filetype_parameter="project" && file_to_build="`ls -A | grep -i \\.xcodeproj\$`"; fi
+          file_to_build=`echo $file_to_build | awk '{$1=$1;print}'`
+          xcodebuild test-without-building -scheme "$scheme" -"$filetype_parameter" "$file_to_build" -destination "$platform"
