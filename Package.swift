@@ -20,9 +20,11 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "SwiftDisplayLink",
+            //No Need to define Sources here as every file that is present under this predefined location `[PackageRoot]/Sources/[TargetName]` is treated as its source file.
             dependencies: []),
         .testTarget(
             name: "SwiftDisplayLinkTests",
+            //No Need to define Sources here as every file that is present under this predefined location `[PackageRoot]/Tests/[TargetName]Tests` is treated as its test file.
             dependencies: ["SwiftDisplayLink"]),
     ]
 )
