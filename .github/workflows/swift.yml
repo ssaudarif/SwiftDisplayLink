@@ -31,7 +31,6 @@ jobs:
           file_to_build=`echo $file_to_build | awk '{$1=$1;print}'`
           xcodebuild build-for-testing -scheme "$scheme" -"$filetype_parameter" "$file_to_build" -destination "platform=$platform,name=$device"
       - name: Testing iOS project
-        continue-on-error: true
         env:
           scheme: ${{ 'DemoApp (iOS)' }}
           platform: ${{ 'iOS Simulator' }}
@@ -44,6 +43,7 @@ jobs:
           file_to_build=`echo $file_to_build | awk '{$1=$1;print}'`
           xcodebuild test-without-building -scheme "$scheme" -"$filetype_parameter" "$file_to_build" -destination "platform=$platform,name=$device"
       - name: Build macOS project for testing
+        if: success() || failure()
         env:
           scheme: ${{ 'DemoApp (macOS)' }}
           platform: ${{ 'macOS' }}
@@ -55,7 +55,6 @@ jobs:
           file_to_build=`echo $file_to_build | awk '{$1=$1;print}'`
           xcodebuild build-for-testing -scheme "$scheme" -"$filetype_parameter" "$file_to_build" -destination "platform=$platform"
       - name: Testing macOS project
-        continue-on-error: true
         env:
           scheme: ${{ 'DemoApp (macOS)' }}
           platform: ${{ 'macOS' }}
