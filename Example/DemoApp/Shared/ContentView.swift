@@ -9,8 +9,88 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack {
+            HStack {
+                SimpleLoader()
+                SimpleLoader()
+                SimpleLoader()
+                SimpleLoader()
+                SimpleLoader()
+                SimpleLoader()
+            }
+            HStack {
+                SimpleLoader()
+                SimpleLoader()
+                SimpleLoader()
+                SimpleLoader()
+                SimpleLoader()
+                SimpleLoader()
+            }
+            HStack {
+                SimpleLoader()
+                SimpleLoader()
+                SimpleLoader()
+                SimpleLoader()
+                SimpleLoader()
+                SimpleLoader()
+            }
+            HStack {
+                SimpleLoader()
+                SimpleLoader()
+                SimpleLoader()
+                SimpleLoader()
+                SimpleLoader()
+                SimpleLoader()
+            }
+            HStack {
+                SimpleLoader()
+                SimpleLoader()
+                SimpleLoader()
+                SimpleLoader()
+                SimpleLoader()
+                SimpleLoader()
+            }
+            HStack {
+                SimpleLoader()
+                SimpleLoader()
+                SimpleLoader()
+                SimpleLoader()
+                SimpleLoader()
+                SimpleLoader()
+            }
+            HStack {
+                SimpleLoader()
+                SimpleLoader()
+                SimpleLoader()
+                SimpleLoader()
+                SimpleLoader()
+                SimpleLoader()
+            }
+            HStack {
+                SimpleLoader()
+                SimpleLoader()
+                SimpleLoader()
+                SimpleLoader()
+                SimpleLoader()
+                SimpleLoader()
+            }
+            HStack {
+                SimpleLoader()
+                SimpleLoader()
+                SimpleLoader()
+                SimpleLoader()
+                SimpleLoader()
+                SimpleLoader()
+            }
+            HStack {
+                SimpleLoader()
+                SimpleLoader()
+                SimpleLoader()
+                SimpleLoader()
+                SimpleLoader()
+                SimpleLoader()
+            }
+        }.padding()
     }
 }
 

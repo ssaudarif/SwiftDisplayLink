@@ -52,7 +52,7 @@ public struct SwiftDisplayLinkFrameData {
     ///     - duration: The CFTimeInterval in seconds.
     ///     - isFrameConstructed: The Bool flag
     ///
-    init(duration d: CFTimeInterval, isFrameConstructed constructed: Bool = true) {
+    public init(duration d: CFTimeInterval, isFrameConstructed constructed: Bool = true) {
         duration = d
         isFrameConstructed = constructed
     }
@@ -72,8 +72,8 @@ public class SwiftDisplayLink {
     
     private let numberOfFrames: Int
     private let frameDataBlock: SwiftDisplayLinkFrameDataBlock
-    private var eventCallBlock: SwiftDisplayLinkEventBlock?
-    private var isPlaying: Bool = false
+    var eventCallBlock: SwiftDisplayLinkEventBlock?
+    var isPlaying: Bool = false
     private var frame:Int = 0
     private var willRepeat: Bool
     private var nextDuration: CFTimeInterval = minDuration

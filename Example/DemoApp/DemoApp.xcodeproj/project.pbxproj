@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B378003828CC518500C52A62 /* SimpleLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B378003728CC518500C52A62 /* SimpleLoader.swift */; };
+		B3C7EB5628CC592300F7879B /* SwiftDisplayLink in Frameworks */ = {isa = PBXBuildFile; productRef = B3C7EB5528CC592300F7879B /* SwiftDisplayLink */; };
+		B3C7EB5828CC592800F7879B /* SwiftDisplayLink in Frameworks */ = {isa = PBXBuildFile; productRef = B3C7EB5728CC592800F7879B /* SwiftDisplayLink */; };
+		B3C7EB5928CD0A1F00F7879B /* SimpleLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B378003728CC518500C52A62 /* SimpleLoader.swift */; };
 		B3F4FC5728B004CF005C98E0 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F4FC5628B004CF005C98E0 /* Tests_iOS.swift */; };
 		B3F4FC5928B004CF005C98E0 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F4FC5828B004CF005C98E0 /* Tests_iOSLaunchTests.swift */; };
 		B3F4FC6328B004CF005C98E0 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F4FC6228B004CF005C98E0 /* Tests_macOS.swift */; };
@@ -37,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B378003728CC518500C52A62 /* SimpleLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleLoader.swift; sourceTree = "<group>"; };
 		B3F4FC3E28B004CE005C98E0 /* DemoAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoAppApp.swift; sourceTree = "<group>"; };
 		B3F4FC3F28B004CE005C98E0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B3F4FC4028B004CF005C98E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -57,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3C7EB5628CC592300F7879B /* SwiftDisplayLink in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3C7EB5828CC592800F7879B /* SwiftDisplayLink in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +91,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B378003628CC515D00C52A62 /* Loader */ = {
+			isa = PBXGroup;
+			children = (
+				B378003728CC518500C52A62 /* SimpleLoader.swift */,
+			);
+			path = Loader;
+			sourceTree = "<group>";
+		};
+		B3C7EB5428CC592300F7879B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B3F4FC3828B004CE005C98E0 = {
 			isa = PBXGroup;
 			children = (
@@ -93,12 +115,14 @@
 				B3F4FC5528B004CF005C98E0 /* Tests iOS */,
 				B3F4FC6128B004CF005C98E0 /* Tests macOS */,
 				B3F4FC4628B004CF005C98E0 /* Products */,
+				B3C7EB5428CC592300F7879B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		B3F4FC3D28B004CE005C98E0 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				B378003628CC515D00C52A62 /* Loader */,
 				B3F4FC3E28B004CE005C98E0 /* DemoAppApp.swift */,
 				B3F4FC3F28B004CE005C98E0 /* ContentView.swift */,
 				B3F4FC4028B004CF005C98E0 /* Assets.xcassets */,
@@ -168,6 +192,9 @@
 				B3F4FC7D28B0050F005C98E0 /* PBXTargetDependency */,
 			);
 			name = "DemoApp (iOS)";
+			packageProductDependencies = (
+				B3C7EB5528CC592300F7879B /* SwiftDisplayLink */,
+			);
 			productName = "DemoApp (iOS)";
 			productReference = B3F4FC4528B004CF005C98E0 /* DemoApp.app */;
 			productType = "com.apple.product-type.application";
@@ -186,6 +213,9 @@
 				B3F4FC7F28B00515005C98E0 /* PBXTargetDependency */,
 			);
 			name = "DemoApp (macOS)";
+			packageProductDependencies = (
+				B3C7EB5728CC592800F7879B /* SwiftDisplayLink */,
+			);
 			productName = "DemoApp (macOS)";
 			productReference = B3F4FC4B28B004CF005C98E0 /* DemoApp.app */;
 			productType = "com.apple.product-type.application";
@@ -313,6 +343,7 @@
 			files = (
 				B3F4FC6828B004CF005C98E0 /* ContentView.swift in Sources */,
 				B3F4FC6628B004CF005C98E0 /* DemoAppApp.swift in Sources */,
+				B378003828CC518500C52A62 /* SimpleLoader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +353,7 @@
 			files = (
 				B3F4FC6928B004CF005C98E0 /* ContentView.swift in Sources */,
 				B3F4FC6728B004CF005C98E0 /* DemoAppApp.swift in Sources */,
+				B3C7EB5928CD0A1F00F7879B /* SimpleLoader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -713,6 +745,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		B3C7EB5528CC592300F7879B /* SwiftDisplayLink */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SwiftDisplayLink;
+		};
+		B3C7EB5728CC592800F7879B /* SwiftDisplayLink */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SwiftDisplayLink;
+		};
 		B3F4FC7C28B0050F005C98E0 /* SwiftDisplayLink */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = SwiftDisplayLink;
