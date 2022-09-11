@@ -1,25 +1,3 @@
-name: Swift
-
-on:
-  push:
-    branches: [ "Adding-GithubActions" ]
-  pull_request:
-    branches: [ "Adding-GithubActions" ]
-
-jobs:
-  build:
-
-    runs-on: macos-latest
-
-    steps:
-    - uses: actions/checkout@v3
-    - name: Build
-      run: swift build -v
-    - name: Run tests
-      run: swift test -v
-
-
-
 name: SwiftDisplayLink Workflow
 
 on:
