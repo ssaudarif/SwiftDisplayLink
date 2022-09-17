@@ -7,10 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B378003828CC518500C52A62 /* SimpleLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B378003728CC518500C52A62 /* SimpleLoader.swift */; };
+		B3649BAC28D5A6720040E57D /* TimerCompareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3649BAB28D5A6720040E57D /* TimerCompareView.swift */; };
+		B3649BAD28D5A6720040E57D /* TimerCompareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3649BAB28D5A6720040E57D /* TimerCompareView.swift */; };
+		B3649BAF28D5A8990040E57D /* TimerClock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3649BAE28D5A8990040E57D /* TimerClock.swift */; };
+		B3649BB028D5A8990040E57D /* TimerClock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3649BAE28D5A8990040E57D /* TimerClock.swift */; };
+		B3649BB228D5C3570040E57D /* DisplayLinkTimerClock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3649BB128D5C3570040E57D /* DisplayLinkTimerClock.swift */; };
+		B3649BB328D5C3570040E57D /* DisplayLinkTimerClock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3649BB128D5C3570040E57D /* DisplayLinkTimerClock.swift */; };
+		B378003828CC518500C52A62 /* SimpleTextRoator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B378003728CC518500C52A62 /* SimpleTextRoator.swift */; };
 		B3C7EB5628CC592300F7879B /* SwiftDisplayLink in Frameworks */ = {isa = PBXBuildFile; productRef = B3C7EB5528CC592300F7879B /* SwiftDisplayLink */; };
 		B3C7EB5828CC592800F7879B /* SwiftDisplayLink in Frameworks */ = {isa = PBXBuildFile; productRef = B3C7EB5728CC592800F7879B /* SwiftDisplayLink */; };
-		B3C7EB5928CD0A1F00F7879B /* SimpleLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B378003728CC518500C52A62 /* SimpleLoader.swift */; };
+		B3C7EB5928CD0A1F00F7879B /* SimpleTextRoator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B378003728CC518500C52A62 /* SimpleTextRoator.swift */; };
+		B3C7EB5B28CE40A100F7879B /* StackOfRotators.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C7EB5A28CE40A100F7879B /* StackOfRotators.swift */; };
+		B3C7EB5C28CE40A100F7879B /* StackOfRotators.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C7EB5A28CE40A100F7879B /* StackOfRotators.swift */; };
 		B3F4FC5728B004CF005C98E0 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F4FC5628B004CF005C98E0 /* Tests_iOS.swift */; };
 		B3F4FC5928B004CF005C98E0 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F4FC5828B004CF005C98E0 /* Tests_iOSLaunchTests.swift */; };
 		B3F4FC6328B004CF005C98E0 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F4FC6228B004CF005C98E0 /* Tests_macOS.swift */; };
@@ -41,7 +49,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B378003728CC518500C52A62 /* SimpleLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleLoader.swift; sourceTree = "<group>"; };
+		B3649BAB28D5A6720040E57D /* TimerCompareView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerCompareView.swift; sourceTree = "<group>"; };
+		B3649BAE28D5A8990040E57D /* TimerClock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerClock.swift; sourceTree = "<group>"; };
+		B3649BB128D5C3570040E57D /* DisplayLinkTimerClock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayLinkTimerClock.swift; sourceTree = "<group>"; };
+		B378003728CC518500C52A62 /* SimpleTextRoator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTextRoator.swift; sourceTree = "<group>"; };
+		B3C7EB5A28CE40A100F7879B /* StackOfRotators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackOfRotators.swift; sourceTree = "<group>"; };
 		B3F4FC3E28B004CE005C98E0 /* DemoAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoAppApp.swift; sourceTree = "<group>"; };
 		B3F4FC3F28B004CE005C98E0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B3F4FC4028B004CF005C98E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -91,10 +103,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B3649BAA28D5A6720040E57D /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				B3649BAB28D5A6720040E57D /* TimerCompareView.swift */,
+				B3649BAE28D5A8990040E57D /* TimerClock.swift */,
+				B3649BB128D5C3570040E57D /* DisplayLinkTimerClock.swift */,
+			);
+			path = Timer;
+			sourceTree = "<group>";
+		};
 		B378003628CC515D00C52A62 /* Loader */ = {
 			isa = PBXGroup;
 			children = (
-				B378003728CC518500C52A62 /* SimpleLoader.swift */,
+				B378003728CC518500C52A62 /* SimpleTextRoator.swift */,
+				B3C7EB5A28CE40A100F7879B /* StackOfRotators.swift */,
 			);
 			path = Loader;
 			sourceTree = "<group>";
@@ -122,6 +145,7 @@
 		B3F4FC3D28B004CE005C98E0 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				B3649BAA28D5A6720040E57D /* Timer */,
 				B378003628CC515D00C52A62 /* Loader */,
 				B3F4FC3E28B004CE005C98E0 /* DemoAppApp.swift */,
 				B3F4FC3F28B004CE005C98E0 /* ContentView.swift */,
@@ -342,8 +366,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3F4FC6828B004CF005C98E0 /* ContentView.swift in Sources */,
+				B3649BAC28D5A6720040E57D /* TimerCompareView.swift in Sources */,
+				B3C7EB5B28CE40A100F7879B /* StackOfRotators.swift in Sources */,
 				B3F4FC6628B004CF005C98E0 /* DemoAppApp.swift in Sources */,
-				B378003828CC518500C52A62 /* SimpleLoader.swift in Sources */,
+				B3649BB228D5C3570040E57D /* DisplayLinkTimerClock.swift in Sources */,
+				B3649BAF28D5A8990040E57D /* TimerClock.swift in Sources */,
+				B378003828CC518500C52A62 /* SimpleTextRoator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,8 +380,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3F4FC6928B004CF005C98E0 /* ContentView.swift in Sources */,
+				B3649BAD28D5A6720040E57D /* TimerCompareView.swift in Sources */,
+				B3C7EB5C28CE40A100F7879B /* StackOfRotators.swift in Sources */,
 				B3F4FC6728B004CF005C98E0 /* DemoAppApp.swift in Sources */,
-				B3C7EB5928CD0A1F00F7879B /* SimpleLoader.swift in Sources */,
+				B3649BB328D5C3570040E57D /* DisplayLinkTimerClock.swift in Sources */,
+				B3649BB028D5A8990040E57D /* TimerClock.swift in Sources */,
+				B3C7EB5928CD0A1F00F7879B /* SimpleTextRoator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,5 +1,5 @@
 //
-//  SimpleLoader.swift
+//  SimpleTextRoator.swift
 //  DemoApp (iOS)
 //
 //  Created by Syed Saud Arif on 10/09/22.
@@ -8,7 +8,7 @@
 import SwiftUI
 import SwiftDisplayLink
 
-struct SimpleLoader: View {
+struct SimpleTextRoator: View {
     static let anglesCount = 50
     static let angles:[Double] = {
         var tempAngles = [Double]()
@@ -19,7 +19,7 @@ struct SimpleLoader: View {
         return tempAngles
     }()
     
-    let displayLink = SwiftDisplayLink(frameCount: SimpleLoader.anglesCount, repeatFrames: true) { frame in
+    let displayLink = SwiftDisplayLink(frameCount: SimpleTextRoator.anglesCount, repeatFrames: true) { frame in
         SwiftDisplayLinkFrameData(duration: 0.016, isFrameConstructed: true)
     }
     
@@ -27,15 +27,15 @@ struct SimpleLoader: View {
     @State var index:Int = 0
     var body: some View {
         Text("🌀").font(.system(size: 50))
-            .rotationEffect(.radians(SimpleLoader.angles[index]))
+            .rotationEffect(.radians(SimpleTextRoator.angles[index]))
             .displayLinkAnchor(displayLink) { event, frame in
                 index = frame
             }
     }
 }
 
-struct SimpleLoader_Previews: PreviewProvider {
+struct SimpleTextRoator_Previews: PreviewProvider {
     static var previews: some View {
-        SimpleLoader()
+        SimpleTextRoator()
     }
 }
