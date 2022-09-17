@@ -59,4 +59,14 @@ The above code will fire 10 events, with variable durations between them. These 
 So the gaps between the events will be - `0.1`, `2.1`, `4.1`, `6.1`  ....  `18.1` 
 
 
+## Example
+
+In the demo project I have tested the SwiftDisplayLink, here you can see 60 instances of SwiftDisplayLink working perfectly fine without any jitters.
+
+<p align="center">
+    </br>
+    <img src="https://github.com/ssaudarif/SwiftDisplayLink/blob/main/Extras/Displaylinkdemo.gif" align="center" />
+</p>
+
+
 
