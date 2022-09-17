@@ -68,5 +68,5 @@ In the demo project I have tested the SwiftDisplayLink, here you can see 60 inst
     <img src="https://github.com/ssaudarif/SwiftDisplayLink/blob/main/Extras/Displaylinkdemo.gif" align="center" />
 </p>
 
-
+I have added timer clock too in the example project. That is for comparison between the normal clock and clock created using SwiftDisplayLink. The SwiftDisplayLink time will rely on calculation depenedent on the duration between the ticks of SwiftDisplayLink. 
 
