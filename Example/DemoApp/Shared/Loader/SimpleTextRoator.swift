@@ -10,15 +10,15 @@ import SwiftDisplayLink
 
 struct SimpleTextRoator: View {
     static let anglesCount = 50
-    static let angles:[Double] = {
+    static let angles: [Double] = {
         var tempAngles = [Double]()
         let multiplier: Double = Double.pi * (2.0 / Double(anglesCount))
-        for i in 0...(anglesCount - 1) {
-            tempAngles.append(multiplier * Double(i))
+        for index in 0...(anglesCount - 1) {
+            tempAngles.append(multiplier * Double(index))
         }
         return tempAngles
     }()
-    
+
     let displayLink = SwiftDisplayLink(frameCount: SimpleTextRoator.anglesCount, repeatFrames: true) { frame in
         SwiftDisplayLinkFrameData(duration: 0.016, isFrameConstructed: true)
     }

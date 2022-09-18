@@ -9,3 +9,4 @@ DerivedData/
 .netrc
 IDEWorkspaceChecks.plist
 Example/DemoApp/build/XCBuildData
+Example/DemoApp/Pods
