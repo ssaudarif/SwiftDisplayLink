@@ -7,12 +7,11 @@
 
 import SwiftUI
 
-
 @available(macOS 10.15, *)
 @available(iOS 13.0, *)
 public extension View {
     func displayLinkAnchor(_ link: SwiftDisplayLink, _ eventCallback: @escaping(SwiftDisplayLinkEventBlock)) -> Self {
-        if (link.isPlaying) {
+        if link.isPlaying {
             link.eventCallBlock = eventCallback
         } else {
             link.play(eventCallback)

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    
+
     @State private var isShowingRotatorsView = false
     @State private var isTimerCompareView = false
 
@@ -17,14 +17,14 @@ struct ContentView: View {
             VStack {
                 NavigationLink(destination: StackOfRotators(),
                                isActive: $isShowingRotatorsView) {
-                    
+
                     Text("Tap to see Rotators...").onTapGesture {
                         isShowingRotatorsView = true
                     }
                 }
                 NavigationLink(destination: TimerCompareView(),
                                isActive: $isTimerCompareView) {
-                    
+
                     Text("Tap to see Timer...").onTapGesture {
                         isTimerCompareView = true
                     }

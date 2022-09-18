@@ -233,7 +233,7 @@ final class SwiftDisplayLinkTests: XCTestCase {
         timeStampsForPerformAction.append(DispatchTime.now())
 
         displayLink.play { event, frame  in
-            if case let .performAction( currentTime, duration) = event {
+            if case .performAction( _, _) = event {
                 timeStampsForPerformAction.append(DispatchTime.now())
                 if frame == 4 {
                     counter = counter + 1
