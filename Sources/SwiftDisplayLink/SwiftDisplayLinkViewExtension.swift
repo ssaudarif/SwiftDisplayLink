@@ -5,10 +5,10 @@
 //  Created by Syed Saud Arif on 10/09/22.
 //
 
+#if canImport(SwiftUI)
 import SwiftUI
 
-@available(macOS 10.15, *)
-@available(iOS 13.0, *)
+@available(iOS 13.0, OSX 10.15, *)
 public extension View {
     func displayLinkAnchor(_ link: SwiftDisplayLink, _ eventCallback: @escaping(SwiftDisplayLinkEventBlock)) -> Self {
         if link.isPlaying {
@@ -19,3 +19,4 @@ public extension View {
         return self
     }
 }
+#endif
