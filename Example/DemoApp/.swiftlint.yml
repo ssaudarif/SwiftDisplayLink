@@ -1,0 +1,8 @@
+
+function_parameter_count:
+  - 8 # warning
+  - 12 # error
+
+line_length:
+  warning: 250
+  error: 800

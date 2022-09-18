@@ -20,7 +20,7 @@ import Foundation
 ///  ```
 ///
 public struct SwiftDisplayLinkFrameData {
-    
+
     /// The `duration` is a `CFTimeInterval` object that stores the duration
     /// that needs to be elapsed before calling event for this frame.
     ///
@@ -33,13 +33,13 @@ public struct SwiftDisplayLinkFrameData {
     /// for ``iOS`` - `0.016`
     ///
     let duration: CFTimeInterval
-    
+
     /// The `isFrameConstructed` is a `Bool` flag if this flag is false, the calling application will
     /// recieve an extra callback for construct frame event.
     /// Developers can use this extra callback to perform some pre-render logic for that frame.
     ///
     let isFrameConstructed: Bool
-    
+
     /// Constructor of `SwiftDisplayLinkFrameData` model.
     ///
     /// ```
@@ -51,8 +51,8 @@ public struct SwiftDisplayLinkFrameData {
     ///     - duration: The CFTimeInterval in seconds.
     ///     - isFrameConstructed: The Bool flag
     ///
-    public init(duration d: CFTimeInterval, isFrameConstructed constructed: Bool = true) {
-        duration = d
+    public init(duration durationInterval: CFTimeInterval, isFrameConstructed constructed: Bool = true) {
+        duration = durationInterval
         isFrameConstructed = constructed
     }
 }
@@ -61,57 +61,55 @@ typealias SwiftDisplayLinkEventInternalBlock = ((_ currentTime: CFTimeInterval, 
 public typealias SwiftDisplayLinkFrameDataBlock = ((_ frame: Int) -> SwiftDisplayLinkFrameData)
 public typealias SwiftDisplayLinkEventBlock = ((_ event: SwiftDisplayLink.Event, _ frame: Int) -> Void)
 
-
 public class SwiftDisplayLink {
-    
+
     public enum Event {
         case constructFrame
         case performAction(_ currentTime: CFTimeInterval, _ duration: CFTimeInterval)
     }
-    
+
     private let numberOfFrames: Int
     private let frameDataBlock: SwiftDisplayLinkFrameDataBlock
     var eventCallBlock: SwiftDisplayLinkEventBlock?
     var isPlaying: Bool = false
-    private var frame:Int = 0
+    private var frame: Int = 0
     private var willRepeat: Bool
     private var nextDuration: CFTimeInterval = minDuration
     private static let minDuration: CFTimeInterval = 0.016666667
     private var durationSinceLastEvent: Double = 0.0
 
-    
     public init( frameCount: Int, repeatFrames: Bool = false, _ frameData: @escaping SwiftDisplayLinkFrameDataBlock ) {
         frameDataBlock = frameData
         willRepeat = repeatFrames
         numberOfFrames = frameCount
     }
-    
+
     public func play(_ eventCallback: @escaping SwiftDisplayLinkEventBlock ) {
         eventCallBlock = eventCallback
         setUpFrameStart()
         startEvents()
     }
-    
+
     public func resume() {
         setUpFrameStart()
         startEvents()
     }
-    
+
     public func pause() {
         stopEvents()
     }
-    
+
     public func invalid() {
         eventCallBlock = nil
         SwiftDisplayLinkWrapper.shared.removeEventBlock(for: self)
     }
-    
+
     private func setUpFrameStart() {
         SwiftDisplayLinkWrapper.shared.setUpFrameStart()
         SwiftDisplayLinkWrapper.shared.addEventBlock(object: self, getAnimatingBlock())
 //        frame = 0
     }
-    
+
     private func startEvents() {
         isPlaying = true
         let frameData = frameDataBlock(frame)
@@ -122,39 +120,35 @@ public class SwiftDisplayLink {
         }
         SwiftDisplayLinkWrapper.shared.start()
     }
-    
+
     private func stopEvents() {
         isPlaying = false
     }
-    
-    
+
     private func getAnimatingBlock() -> SwiftDisplayLinkEventInternalBlock {
         return { [weak self] (timestamp, duration) in
             if let kSelf = self {
                 guard kSelf.isPlaying else { return }
-                
-                kSelf.durationSinceLastEvent = kSelf.durationSinceLastEvent + duration
-                kSelf.nextDuration = kSelf.nextDuration - duration
+
+                kSelf.durationSinceLastEvent += duration
+                kSelf.nextDuration -= duration
                 if kSelf.nextDuration > 0 {
                     return
                 }
-                
+
                 if kSelf.frame >= 0 {
                     kSelf.eventCallBlock?(.performAction(timestamp, kSelf.durationSinceLastEvent), kSelf.frame)
                 }
-                
+
                 kSelf.setupForNextFrameFire()
             }
         }
     }
-    
-    
 
-    
     private func setupForNextFrameFire() {
-        frame = frame + 1
-        let n = numberOfFrames
-        if frame >= n {
+        frame += 1
+        let num = numberOfFrames
+        if frame >= num {
             if willRepeat {
                 frame = 0
             } else {
@@ -169,23 +163,20 @@ public class SwiftDisplayLink {
             eventCallBlock?(.constructFrame, frame)
         }
     }
-    
+
     deinit {
         SwiftDisplayLinkWrapper.shared.removeEventBlock(for: self)
     }
-    
+
 }
 
-extension SwiftDisplayLink : Hashable {
+extension SwiftDisplayLink: Hashable {
 
     public func hash(into hasher: inout Hasher) {
         hasher.combine(ObjectIdentifier(self))
     }
 
-    public static func ==(lhs: SwiftDisplayLink, rhs: SwiftDisplayLink) -> Bool {
+    public static func == (lhs: SwiftDisplayLink, rhs: SwiftDisplayLink) -> Bool {
         return lhs === rhs
     }
 }
-
-
-

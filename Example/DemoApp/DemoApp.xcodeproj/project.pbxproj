@@ -448,7 +448,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\" lint\ncd ../../Sources\n\"${PODS_ROOT}/SwiftLint/swiftlint\" lint\n";
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\" lint --config \"${SRCROOT}/.swiftlint.yml\"\ncd ../../Sources\n\"${PODS_ROOT}/SwiftLint/swiftlint\" lint --config \"${SRCROOT}/.swiftlint.yml\"\n";
 		};
 		B3649BB528D6FF230040E57D /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -465,7 +465,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "#\"${PODS_ROOT}/SwiftLint/swiftlint\" lint \n#cd ../../Sources\n#\"${PODS_ROOT}/SwiftLint/swiftlint\" lint\n";
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\" lint --config \"${SRCROOT}/.swiftlint.yml\" \ncd ../../Sources\n\"${PODS_ROOT}/SwiftLint/swiftlint\" lint --config \"${SRCROOT}/.swiftlint.yml\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
