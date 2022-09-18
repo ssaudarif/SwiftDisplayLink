@@ -7,7 +7,7 @@ The underlying components that are used to implement this are :
 OS | macOS | iOS |
 --- | --- | --- |
 Component Used | CVDisplayLink | CADisplayLink |
-
+ 
 How to use:
 
 First you need to create a SwiftDisplayLink Object.
